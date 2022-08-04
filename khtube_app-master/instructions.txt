@@ -1,0 +1,44 @@
+For creating https certificate i.e. ssl
+
+sudo openssl req -x509 nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-self-signed.key -out /etc/ssl/certs/nginx-self-signed.crt
+
+
+# Make an elastic ip address.
+# Open port 80 and 443 in security groups by enabling http and https
+# write simple flaskapp server with port 80 opened. No need to write there 443.
+# connect your aws ip with the domain name in A and Cname section.
+# You can do this by making subdomain and then adding it.
+# For the ssl certificate make an account on cloudflare and then connect your domain name with cloudflare. 
+
+
+# For installing chrome in ec2 instance 
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+
+# check installation
+google-chrome-stable --version
+
+# install selenium
+pip3 install selenium --user
+
+
+# For checking the runing processes with the name of gunicorn, write this command.
+pgrep gunicorn
+# For killing the process run
+kill <process id>
+
+All the timers should be same.
+For now perfect one is 900s
+Also try 500s on both.
+
+#For killing a process outside the function we used exec keyword in our terminal based commands and also defined global variable. e.g below:
+global ppid
+global scr_process
+proc = subprocess.Popen(f'exec python {cwd}/Youtube_flask/yt_original.py --user_kw="{user_kw}"', shell=True, stdin=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+# proc = subprocess.Popen(f'exec python {cwd}/yt_original.py --user_kw="{user_kw}"', shell=True, stdin=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+ppid = proc.pid
+scr_process = proc
+
+
+

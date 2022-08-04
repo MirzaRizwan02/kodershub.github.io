@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KHTUBE</title>
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1" charset = "UTF-8">
+  <link rel = "stylesheet", href = "../static/css/style2.css">
+
+  <link rel = "stylesheet", href = "../static/css/bootstrap.min.css">
+      
+
+</head>
+<body>
+    <div class ="logo">
+        <center><img src="../static/images/khtube.png" height="100px" width="auto"></center>
+    </div>
+    <div class="url">
+        <h2>Download YouTube Video</h2>
+        <form action="" id="myform" method="POST" enctype=multipart/form-data>
+          <div class="url-box">
+            <input type="text" name="url" id="vid_url" required>
+            <label>Enter YouTube's Video URL</label>
+          </div>
+        
+        <!-- Trim part -->
+        <spam style="color: azure; margin-bottom: auto;">If you want to trim the video </spam>
+        <input type="button" value="Click here" onclick="click_toggle()"
+          style="font-size: 15px; margin: -1px; opacity: 80%;"></br></br>
+
+        <!----- Time Bar ----> 
+
+        <div id="time" style="display: none;">
+          <label id="time" style="color: azure;"> From </label>
+          <input id="initial_time" type="text" name="initial_time" placeholder="HH:MM:SS" required
+            style="width: 100px; height: 20px; margin: 1em;">
+          <label id="time" style="color: azure;"> to </label>
+          <input id="final_time" type="text" name="final_time" placeholder="HH:MM:SS" required
+            style="width: 100px; height: 20px; margin: 1em;">
+        </div>
+
+        <!-- Trim part end here  -->
+
+        <!----- Download Youtube Video ------------> 
+          <div class = "dropdown">
+            <a id="download_bt" href="#">Download Video        
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span></a>
+            <div class="dropdown-content">
+              <a href="#" id="mp3" type="submit" style="font-size: 11px;">MP3</a>        
+              <a href="#" id="normal" type="submit" style="font-size: 11px;">Normal SD</a>
+              <a href="#" id="best" type="submit" style="font-size: 11px;">Best HD</a>        
+              <a href="#" id="vbest" type="submit" style="font-size: 11px;">VIP UHD 4K/8K</a>
+                                    
+            </div>
+          </div>
+            
+          
+       
+        </form>
+     
+        <!-- Progress bar -->
+       
+        <div id="loader">
+          <div class="spinner-grow text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-secondary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-success" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-danger" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-warning" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-info" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-dark" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div>
+            <p class="text-white">Downloading please wait ...</p>
+          </div>
+        </div>
+        
+        <!-- ///////// -->
+
+        <p class ="copyright">Powered by KODERSHUB</p>
+      </div>
+
+
+    <div class="url1">
+        <h2>Scrape Channel's Data</h2>
+        <form action="" id="scrapeform" method="POST" enctype=multipart/form-data>
+          <div class="url-box1">
+            <input type="text" id="user_keyw" name="user_kw" required>
+            <label>Enter Keywords, it may result in up to 500 channels</label>
+          </div>
+  
+            <div class = "dropdown1">
+            <a id="scrape_bt" href="#">Scrape Data         
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span></a>
+            <div class="dropdown-content1">
+            </div>
+          </div>
+
+        </form>
+
+        <!-- Progress bar -->
+       
+        <div id="loader-2">
+          <div class="spinner-grow text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-secondary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-success" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-danger" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-warning" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-info" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-dark" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div>
+            <p class="text-white">Scrapping will take 10 - 20 minutes, please wait...</p>
+          </div>
+        </div>
+        
+        <!-- ///////// -->
+
+
+        <p class ="copyright">Powered by KODERSHUB</p>
+      </div>
+
+    <!-- Bootstrap -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+  
+    <script src="../static/js/main.js"></script>
+      
+
+    <!-- JavaScript code to toggle time bar !! -->
+    <script>
+      function click_toggle() {
+  
+        $("#time").show(); 
+
+      }
+    </script>
+    
+
+
+
+</body>
+</html>
